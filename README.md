@@ -1,4 +1,4 @@
-# elastic-search-demo-gsa-replacement
+# elastic-search-scrapy
 Demo for Elastic to replace GSA. Uses Elastic, Logstash and Scrapy
 
 The following demo consists of several dockerized artifacts and shows how different data sources, like DBs, static sites can be used by Elasticsearch as inputs. In the near future, a sample web services will be added.
