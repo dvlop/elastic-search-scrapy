@@ -1,0 +1,226 @@
+/*****************************************/ 
+/********** COLOR BOTON BUSCAR ***********/
+/*****************************************/ 
+
+.btn-primary{
+	background: #fe6a0a;
+}
+		.btn-primary:hover{
+		background: #d95d0c;
+	}
+/*****************************************/ 
+/*************** BG FOOTER ***************/
+/*****************************************/ 
+
+.lane-footer{
+	background: #fe6a0a;
+}
+/*****************************************/ 
+/************ LINK RESULTADOS ************/
+/*****************************************/ 
+
+.btn-resultados{
+	color: #fe6a0a;
+}
+	.btn-resultados:hover{
+		color: #e5600a;
+	}
+/*****************************************/ 
+/************ COLOR PAGINATION ***********/
+/*****************************************/ 
+
+
+.pagination>li>a, .pagination>li>span{
+	color: #fe6a0a;
+}
+	.pagination>li>a:hover, .pagination>li>span:hover{
+		color: #e5600a;
+	}
+
+/*****************************************/ 
+/****************** ICONS ****************/
+/*****************************************/ 
+
+/* Add or modify icons : http://fontawesome.io/icons/ */
+.icons i{
+	font-size: 21px;
+}
+	.icons i:hover{
+		opacity: 0.8;
+	}
+/***********************************************************/
+/***********************************************************/
+/***********************************************************/
+
+
+body, html{
+	width: 100%;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+#wrapper{
+	min-height: 100%;
+}
+.logo {
+    margin-top: 144px;
+    margin-bottom: 112px;
+}
+
+/* Estilo para inputs de formularios */
+.forms{
+	outline: none;
+    background: #eeeeee;
+    border: 0px;
+    border-radius: 0px;
+    height: 40px;
+}
+.busqueda h1{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.busqueda select {
+    width: 25%;
+    max-width: 210px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.busqueda input[type="text"] {
+    width: 65%;
+    max-width: 570px;
+    display: inline-block;
+}
+/* Botones */
+.btn-primary {
+    border-radius: 0px;
+    border: 0px;
+    text-transform: uppercase;
+    color: #fff;
+    height: 40px;
+    vertical-align: top;
+}
+	.btn-primary:hover{
+		background: #d95d0c;
+	}
+
+.search{ margin-left: -4px;}
+
+
+/* Footer */
+footer .lane-footer{
+	width: 100%;
+	height: 22px;
+	overflow: hidden;
+}
+footer{
+	margin-top: -52px;
+	font-family: 'Lato', sans-serif;
+}
+
+.rights{
+	margin-left: 10px;
+}
+footer .col-md-6 span, footer .col-xs-12 span {
+	margin: 0px 12px 0px 12px;
+}
+footer .col-md-6 a, footer .col-xs-12 a{
+	color: #575757;
+}
+.icons{
+	display: inline-block;
+	vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* Resultados de busqueda */
+
+.logo.resultados{
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+.busqueda form{
+	margin-bottom: 40px;
+}
+p.contenido-busqueda {
+    font-size: 12px;
+}
+.busqueda-resultados div {
+    border-bottom: 2px solid #eee;
+    margin-top: 14px;
+    max-width: 915px;
+}
+.busqueda-resultados div:last-child{
+	border:0px;
+}
+.busqueda-resultados div p:first-child{
+	font-size: 22px;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 0px;
+}
+.paginador{
+	margin-bottom: 50px;
+}
+.busqueda-resultados .contenido-busqueda{
+	max-width: 850px;
+	padding-bottom: 15px;
+}
+
+/* Media Queries */
+@media(max-width:992px){
+	.logo {
+	    margin-top: 50px;
+	    margin-bottom: 50px;
+	}
+	.busqueda input[type="text"]{
+		width: 50%
+	}
+	.in{
+		margin-right: 8px;
+	}
+	.busqueda select {
+    width: 31%;
+    max-width: 210px;
+	}
+	footer{
+		margin-top: -89px;
+	}
+	footer .col-xs-12 {
+		text-align: center;
+	}
+	footer .col-xs-12.text-right {
+    	margin-bottom: 15px;
+	}
+	.paginador {
+    	margin-bottom: 85px;
+	}
+}
+
+@media(max-width: 768px){
+	.busqueda h1{
+		font-size: 27px;
+	}
+	.busqueda select{
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 15px;
+	}
+	.busqueda input[type="text"] {
+   	 	width: 100%;
+   	 	max-width: 100%;
+	}
+	.search {
+	    width: 100%;
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    margin-bottom: 100px;
+	}
+		.busqueda h1{
+		text-align: center;
+	}
+}

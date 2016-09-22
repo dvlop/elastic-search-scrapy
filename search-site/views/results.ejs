@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banco Galicia</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!-- Icons -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo resultados">
+                        <a href="/#">
+                            <img src="/img/logo.png" alt="Banco Galicia" />
+                        </a>
+                    </div>
+                    <div class="busqueda">
+                        <form method="GET" action="<%=searchActionUrl%>">
+                            <select name="entity" value="<%=entity%>" class="form-control forms">
+		                            <option value="site">Sitio</option>
+		                            <option value="db">Base de datos</option>
+		                        </select>
+                            <input type="text" class="form-control forms" name="q" value="<%=q%>">
+                            <button class="btn btn-primary search">buscar</button>
+                        </form>
+                    </div>
+                    <div class="busqueda-resultados">
+                    <%for (let result of results) {%>
+                            <div>
+                                <p>
+                                    <%=result.description%>
+                                </p>
+                                <a href="/#" class="btn-resultados">
+                                    <%=result.url%>
+                                </a>
+                                <p class="contenido-busqueda">
+                                    <%
+                                    let content = "";
+                                    if (Array.isArray(result.content)) {
+                                        content = result.content[0].toLowerCase();
+                                    } else {
+                                        content = result.content.toLowerCase();
+                                    }
+                                    if (content.length > 200) {
+                                        let pos = content.indexOf(q.toLowerCase());
+                                        let start = 0;
+                                        let end = pos + 100;
+
+                                        if (pos - 100 > 0) {
+                                            start = pos - 100;
+                                        }
+
+                                        if (end > content.length) {
+                                            end = content.length;
+                                        }
+
+                                        let trimmedResult = content.substring(start, end);
+                                    %>
+                                        <%=trimmedResult%>
+                                    <%} else { %>
+                                        <%=content%>     
+                                    <%}%>
+                                </p>
+                            </div>
+                    <%}%>
+                    <!--
+                                <div class="paginador text-center">
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="/#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="/#">1</a></li>
+                                        <li><a href="/#">2</a></li>
+                                        <li><a href="/#">3</a></li>
+                                        <li><a href="/#">4</a></li>
+                                        <li><a href="/#">5</a></li>
+                                        <li>
+                                            <a href="/#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                      -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="col-md-6 col-xs-12 text-left">
+            <p>
+                ©Lagash . All Rights reserved
+            </p>
+        </div>
+        <div class="col-md-6 col-xs-12 text-right">
+            <a href="/#">Privacy Policy</a><span>|</span><a href="/">Terms of Service</a>
+            <a href="/#" class="icons">
+                <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+            </a>
+            <a href="/#" class="icons">
+                <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="container-fluid lane-footer">
+        </div>
+    </footer>
+
+</html>

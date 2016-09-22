@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Banco Galicia</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap Styles -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="/css/main.css">
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<!-- Icons -->
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<div class="container-fluid" id="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="logo">
+						<a href="/#">
+							<img src="/img/logo.png" alt="Banco Galicia" />
+						</a>
+					</div>
+					<div class="busqueda">
+						<h1>¿Qué desea buscar?</h1>
+						<form action="<%=searchActionUrl%>" method="GET">
+							<select name="entity" class="form-control forms">
+                  <option value="site">Sitio</option>
+                  <option value="db">Base de datos</option>
+              </select>
+							<input type="text" name="q" class="form-control forms">
+							<button class="btn btn-primary search">buscar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="col-md-6 col-xs-12 text-left">
+			<p>
+				©Lagash . All Rights reserved
+			</p>
+		</div>
+		<div class="col-md-6 col-xs-12 text-right">
+			<a href="/#">Privacy Policy</a><span>|</span><a href="/">Terms of Service</a>
+			<a href="/#" class="icons">
+				<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+			</a>
+			<a href="/#" class="icons">
+				<i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+			</a>
+		</div>
+		<div class="container-fluid lane-footer">
+		</div>
+	</footer>
+
+</html>
